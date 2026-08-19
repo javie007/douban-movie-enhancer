@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="film" x1="22" y1="21" x2="94" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B70F0"/>
+      <stop offset="1" stop-color="#1648CC"/>
+    </linearGradient>
+    <linearGradient id="tag" x1="75" y1="73" x2="110" y2="111" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12BFF5"/>
+      <stop offset="1" stop-color="#078DEB"/>
+    </linearGradient>
+    <mask id="film-cutouts" maskUnits="userSpaceOnUse" x="16" y="16" width="88" height="96">
+      <rect x="16" y="16" width="88" height="96" rx="16" fill="white"/>
+      <rect x="40" y="32" width="40" height="56" rx="9" fill="black"/>
+      <rect x="25" y="30" width="9" height="10" rx="3" fill="black"/>
+      <rect x="25" y="50" width="9" height="10" rx="3" fill="black"/>
+      <rect x="25" y="70" width="9" height="10" rx="3" fill="black"/>
+      <rect x="86" y="30" width="9" height="10" rx="3" fill="black"/>
+      <rect x="86" y="50" width="9" height="10" rx="3" fill="black"/>
+      <rect x="86" y="70" width="9" height="10" rx="3" fill="black"/>
+    </mask>
+  </defs>
+
+  <rect x="16" y="16" width="88" height="96" rx="16" fill="url(#film)" mask="url(#film-cutouts)"/>
+  <path d="M69 91L85 75H101C107.075 75 112 79.9249 112 86V101C112 107.075 107.075 112 101 112H84C77.9249 112 73 107.075 73 101V95L69 91Z" fill="url(#tag)"/>
+  <path d="M92.5 84V103M83 93.5H102" stroke="white" stroke-width="6" stroke-linecap="round"/>
+</svg>

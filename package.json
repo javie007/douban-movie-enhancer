@@ -1,0 +1,15 @@
+{
+  "name": "douban-movie-enhancer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension that restores the missing 剧情 genre filter on Douban Movie Explore.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-release.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
