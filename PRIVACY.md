@@ -6,7 +6,9 @@
 
 ## 数据处理
 
-本扩展：
+当用户访问豆瓣电影“选电影”页面时，本扩展会在用户设备本地临时读取与类型选择器有关的 DOM 页面结构和 React 组件状态，仅用于加入“剧情”选项并复用豆瓣原生筛选逻辑。这些信息不会被持久保存，也不会发送给开发者或任何第三方。
+
+除此之外，本扩展：
 
 - 不收集个人信息；
 - 不收集浏览历史；
@@ -23,7 +25,11 @@
 
 ## 权限
 
-扩展 Manifest 不申请 `permissions` 或 `host_permissions`。内容脚本只在 `https://movie.douban.com/explore*` 匹配，并在运行时进一步限制为 `/explore` 或 `/explore/`。
+扩展 Manifest 不声明 `permissions` 或 `host_permissions`。它通过 `content_scripts.matches` 声明对 `https://movie.douban.com/explore*` 的页面访问能力，以便在该页面读取和修改类型选择器；运行时会进一步限制为 `/explore` 或 `/explore/`，不会在其他网站运行。
+
+## 有限使用
+
+本扩展对页面信息的本地使用仅限于实现上述单一用户可见功能，不用于广告、分析、画像或任何其他目的。本扩展对信息的使用遵守 Chrome Web Store 用户数据政策及其 Limited Use 要求。
 
 ## 第三方服务
 
